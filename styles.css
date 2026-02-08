@@ -333,3 +333,74 @@ h2{
     font-size:.78rem;
   }
 }
+/* --- MOBILE FIRST IMPRESSION FIX --- */
+.hero-banner{
+  height: 230px;
+  display:flex;
+  align-items:flex-end;
+  padding:16px;
+  font-weight:900;
+  font-size:1.2rem;
+  color: rgba(255,255,255,.92);
+  background:
+    linear-gradient(180deg, rgba(15,18,22,.25) 0%, rgba(15,18,22,.92) 85%),
+    radial-gradient(1200px 500px at 20% 10%, rgba(255,159,28,.35), transparent 55%),
+    radial-gradient(900px 450px at 90% 40%, rgba(255,255,255,.06), transparent 60%),
+    #0f1216;
+}
+
+/* Make the sticky header less tall */
+.header-row{
+  padding:10px 0; /* was 12px */
+}
+.brand-tag{
+  opacity:.9;
+}
+
+/* MOBILE: Make the hero feel like a hero */
+@media (max-width: 900px){
+  .hero{
+    padding:26px 0 18px; /* tighter */
+  }
+
+  h1{
+    font-size:1.6rem;     /* slightly smaller so it fits nicely */
+    line-height:1.15;
+    margin-bottom:10px;
+  }
+
+  .lead{
+    font-size:1rem;
+    margin-top:8px;
+  }
+
+  /* Buttons look better stacked on phones */
+  .cta-row{
+    flex-direction:column;
+    gap:10px;
+  }
+  .cta-row .btn{
+    width:100%;
+    text-align:center;
+    padding:12px 14px;
+  }
+
+  /* Pills: reduce visual bulk */
+  .pill{
+    width:100%;
+    justify-content:flex-start;
+  }
+
+  /* Hero card: make it feel like a clean panel */
+  .hero-card{
+    border-radius:16px;
+  }
+  .hero-image{
+    height:auto; /* banner handles its own height */
+  }
+
+  /* Optional: reduce the space above/below sections */
+  .section{
+    padding:34px 0;
+  }
+}
